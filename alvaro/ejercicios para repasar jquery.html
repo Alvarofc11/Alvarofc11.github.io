@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+<script
+src="https://code.jquery.com/jquery-migrate-3.4.0.js"></script>
+</head>
+<body>
+    <img src="tokyo.jpeg" width="200px">
+    <br>
+    <table class="tabla" id="tabla1">
+        <thead>
+            <tr>
+                <th>nombre <a href=localhost>link</a></th>
+                <th>apellidos</th>
+                <th>edad</th>
+            </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>antonio <a href=localhost>link</a></td>
+            <td>delgado</td>
+            <td>22</td>
+        
+        </tr>
+        <tr>
+            <td>lola <a href=localhost>link</a></td>
+            <td>mento</td>
+            <td>66</td>
+        </tr>
+        <tr>
+            <td>zoila<a href=localhost> link</a></td>
+            <td>peste</td>
+            <td>44</td>
+        </tr>
+        
+        </tbody>
+        
+        </table>
+
+<ul id="presencial">
+<li>sergio</li>
+<li>ayman</li>
+<li>alvaro</li>
+<li>rafa</li>
+
+</ul>
+<br><br>
+<ul id="virtual">
+    <li>carla</li>
+    <li>cristina</li>
+    <li>gonzalo</li>
+    <li>pedro</li>
+    
+    </ul>
+    <form>
+<label>nombre</label>
+<input type="text"><br>
+<label>apellidos</label>
+<input type="text"><br>
+<label>contraseña</label>
+<input type="password"><br>
+<input type="submit" value="mensaje">
+
+
+    </form>
+
+<ul id="notas">
+<li>3</li>
+<li>5</li>
+<li>7</li>
+<li>12</li>
+
+<!--bucle para sumar y hacer media de las notas-->
+
+</ul>
+
+<script>
+    // Poner de un color los elementos de la lista pares
+    // Y de color los impares
+    //ejercicio de poner las notas de colores
+$(function() {
+$("li").each(function(index){
+let par = parseInt($(this).text());
+let impar = parseInt($(this).text());
+if(par%2 == 0){
+    $(this).css("color" , "tomato");
+} else if 
+    (impar%2 ==0 ){
+        $(this).css("color", "blue");
+    }
+
+    else if 
+    (nota>=7 && nota <9 ){
+        $(this).css("color", "yellow");
+    }
+    else if 
+    (nota>=9 && nota <=10 ){
+        $(this).css("color", "green");
+    }
+    
+ else  {
+    $(this).css("color","blue");
+}
+})
+});
+
+
+
+
+$(function() {
+$(" #notas li").each(function(index){
+let nota = parseInt($(this).text());
+if(nota>=0 && nota < 5){
+    $(this).css("color" , "tomato");
+} else if 
+    (nota>=5 && nota <7 ){
+        $(this).css("color", "dodgerblue");
+    }
+
+    else if 
+    (nota>=7 && nota <9 ){
+        $(this).css("color", "yellow");
+    }
+    else if 
+    (nota>=9 && nota <=10 ){
+        $(this).css("color", "green");
+    }
+    
+ else  {
+    $(this).css("color","blue");
+}
+})
+});
+
+
+
+</script>
+
+
+
+
+
+<!--<p id="parrafo1">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vel, quod molestias a ex voluptatibus iste veniam nemo repellat corrupti commodi dolorum exercitationem. Voluptatum nobis magnam officiis culpa autem? Natus, odit.</p>--> 
+    <!--bucle para que te diga la posicion-->
+<!--<script>
+$(document).ready(function(){
+$("#presencial li").each(function(index){
+console.log("Posición["+ index +"]" + $(this).text());
+})
+
+});
+
+$(document).ready(function(index){
+$("#parrafo1").each(function(index){
+    console.log("posicion["+ index +"]" + $(this).text());
+})
+});
+
+
+
+
+
+$(document).ready(function(index){
+    $("tr td:first-child, tr th:first-child").each(function(index){
+        console.log("posicion["+ index +"]" + $(this).text());
+    })
+});
+$(document).ready(function(index){
+    let suma= 0;
+    let media=0;
+    let contador=0;
+$("#notas li").each(function(index){    
+    let nota=parseInt($(this).text());  
+    suma=suma+nota  
+    contador= contador + 1 ;  
+       
+})  
+
+media=suma / contador; 
+console.log(suma);  
+console.log(contador);  
+console.log(media)
+}); 
+
+// para cada tabla contar cuantas filas tiene esta tabla
+
+//Recorrer la primera columna de una tabla
+</scrip>-->
+</body>
+</html>
