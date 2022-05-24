@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    
+</head>
+<body>
+    <!--Crear una tabla de alumnos y sus notas recorrer la tabla y 
+        asignar una clase css diferente en funcion de su nota es aprobado o suspenso-->
+    <script
+src="https://code.jquery.com/jquery-migrate-3.4.0.js"></script>
+
+
+
+
+<table id="tabla-notas">
+    <tr>
+        <th>estudiante</th>
+      <th>parcial de alejandra</th>
+      <th>parcial de antonio</th>
+      <th>Media</th>
+    </tr>
+    <tr>
+        <td>Sergio</td>
+      <td class="td-notas">7</td>
+      <td class="td-notas">8</td>
+      <td class="td-notas"></td>
+     
+    </tr>
+    <tr>
+        <td>cristina</td>
+      <td class="td-notas">5</td>
+      <td class="td-notas">7</td>
+     
+    </tr>
+    <tr>
+        <td>rafael</td>
+      <td class="td-notas">9</td>
+      <td class="td-notas">2</td>
+     
+    </tr>
+  </table>
+
+        <script>
+$("#tabla-notas tr").each(function(index) {
+                let nota1 = $("#tabla-notas tr:nth-child(2) td.td-nota").eq(0).text();
+                let nota2 = $("#tabla-notas tr:nth-child(2) td.td-nota").eq(1).text();
+                let final = ( parseFloat(nota1) + parseFloat(nota2) ) / 2;
+                $("#tabla-notas tr:nth-child(2) td.td-nota").eq(2).text(final);
+            })
+
+
+
+
+
+
+$(function(){
+    $("#tabla-notas tr").each(function(index){
+$("tabla-notas tr:nth-child(2) td.td-nota");
+    
+})
+})
+
+
+$(function() {
+$("#tabla-notas").each(function(index){
+let nota = parseFloat($(this).text());
+
+
+if(nota<=4  ){
+    $(this).addClass("mi-lista-1");}
+    else if 
+    (nota>=5 ){
+        $(this).addClass("mi-lista-2");
+    }
+
+
+
+
+
+
+
+})
+})
+
+$(document).ready(function(index){
+    let suma= 0;
+    let media=0;
+    let contador=0;
+$("#tabla td.notas").each(function(index){    
+    let nota=parseInt($(this).text());  
+    suma=suma+nota  
+    contador= contador + 1 ;  
+       
+})  
+
+media=suma / contador; 
+  
+console.log(media)
+}); 
+
+
+
+
+            // Poner de un color los elementos de la lista pares
+            // Y de color los impares
+            //ejercicio de poner las notas de colores
+       /* $(function() {
+        $("#alumnos li").each(function(index){
+        if(index % 2 == 0){ 
+            $(this).addClass("mi-lista-1");
+        }
+        else {
+            $(this).addClass("mi-lista-2");
+        }
+    })
+})*/
+</script>
+</body>
+</html>
